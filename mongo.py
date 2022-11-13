@@ -7,6 +7,8 @@ db = mongo.HFW
 
 scoredb = db.score
 
+statdb = db.stat
+
 async def get_user_score(chat_id: int, user_id: int):
     x = await scoredb.find_one({"chat_id": chat_id})
     if x:
